@@ -10,6 +10,9 @@
 <h1>socket测试</h1>
 </body>
 <script>
-    io('localhost:3000');
+    var WS= io('localhost:3000');
+    WS.on('net work error',function(data){
+        console.log(data);
+    })
 </script>
 </html>
